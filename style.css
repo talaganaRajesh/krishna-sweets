@@ -14,6 +14,7 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+    cursor: none;
 }
 html{
     font-size: 62.5%;   
@@ -32,6 +33,35 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+
+
+* cursor style */
+
+.cursor-dot{
+  height: 18px;
+  width: 18px;
+  background-color: #361e11;
+}
+
+.cursor-outline{
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(51, 38, 19);
+}
+
+.cursor-dot,.cursor-outline{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+
+
+
 .header{
     top: 0;right: 0;left: 0;
     background-color: var(--white);
@@ -40,20 +70,16 @@ html::-webkit-scrollbar-thumb{
     justify-content: space-between;
     position: fixed;
     padding: 1.4rem 7%;
-    z-index: 999;
+    z-index: 90;
 }
 .header .logoContent{
     display: flex;
     align-items: center;
 }
 .header .logoContent .logo img{
-    height: 4rem;
+    height: 3rem;
 }
-.header .logoContent .logoName {
-    color: var(--black);
-    font-size: 2rem;
-    font-weight: bolder;
-}
+
 
 .header .navbar a{
     font-size: 2rem;
